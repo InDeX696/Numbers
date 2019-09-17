@@ -9,6 +9,11 @@ public class Numbers_ {
 
         assertThat(Numbers.get(0)).isEqualTo("cero");
     }
+    @Test
+    public void give_1_return_one(){
+
+        assertThat(Numbers.get(1)).isEqualTo("one");
+    }
 
 
 

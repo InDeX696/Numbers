@@ -1,5 +1,5 @@
 public class Numbers {
     public static String get(int i) {
-        return "cero";
+        return i == 1 ? "one" : "cero";
     }
 }
