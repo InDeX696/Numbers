@@ -18,7 +18,7 @@ public class Numbers_ {
         assertThat(Numbers.get(9)).isEqualTo("nine");
     }
     @Test
-    public void give_a__ten(){
+    public void give_a_simple_ten(){
         assertThat(Numbers.get(10)).isEqualTo("ten");
         assertThat(Numbers.get(20)).isEqualTo("twenty");
         assertThat(Numbers.get(30)).isEqualTo("thirty");
@@ -29,6 +29,15 @@ public class Numbers_ {
         assertThat(Numbers.get(80)).isEqualTo("eighty");
         assertThat(Numbers.get(90)).isEqualTo("ninety");
 
+    }
+    @Test
+    public void give_a_compound_number(){
+        assertThat(Numbers.get(21)).isEqualTo("twenty-one");
+        assertThat(Numbers.get(22)).isEqualTo("twenty-two");
+        assertThat(Numbers.get(23)).isEqualTo("twenty-three");
+        assertThat(Numbers.get(24)).isEqualTo("twenty-four");
+        assertThat(Numbers.get(32)).isEqualTo("thirty-two");
+        assertThat(Numbers.get(35)).isEqualTo("thirty-five");
     }
 
 
