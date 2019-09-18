@@ -20,6 +20,9 @@ public class Numbers_ {
     @Test
     public void give_a_simple_ten(){
         assertThat(Numbers.get(10)).isEqualTo("ten");
+        assertThat(Numbers.get(11)).isEqualTo("eleven");
+        assertThat(Numbers.get(12)).isEqualTo("twelve");
+        assertThat(Numbers.get(35)).isEqualTo("thirty-five");
         assertThat(Numbers.get(20)).isEqualTo("twenty");
         assertThat(Numbers.get(30)).isEqualTo("thirty");
         assertThat(Numbers.get(40)).isEqualTo("forty");
@@ -31,15 +34,22 @@ public class Numbers_ {
 
     }
     @Test
-    public void give_a_compound_number(){
+    public void give_a_compound_number_tens(){
         assertThat(Numbers.get(21)).isEqualTo("twenty-one");
         assertThat(Numbers.get(22)).isEqualTo("twenty-two");
         assertThat(Numbers.get(23)).isEqualTo("twenty-three");
         assertThat(Numbers.get(24)).isEqualTo("twenty-four");
         assertThat(Numbers.get(32)).isEqualTo("thirty-two");
         assertThat(Numbers.get(35)).isEqualTo("thirty-five");
-    }
+        assertThat(Numbers.get(95)).isEqualTo("ninety-five");
+        assertThat(Numbers.get(99)).isEqualTo("ninety-nine");
 
+    }
+    @Test
+    public void give_a_compound_number_hundred(){
+        assertThat(Numbers.get(145)).isEqualTo("one-hundred-forty-five");
+        assertThat(Numbers.get(100)).isEqualTo("one-hundred");
+    }
 
 
 }

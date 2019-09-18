@@ -11,7 +11,11 @@ public class Numbers {
             return simple(units,i);
         }
         if(num == 2) {
-            return tens.containsKey(i) ? simple(tens, i) : compound(tens,units, number);
+            return tens.containsKey(i) ? simple(tens, i) : compound(tens, units, number);
+        }
+        if(num == 3){
+            number = i-100 +"";
+            return i == 100 ? "one-hundred" : "one-hundred-" + compound(tens,units,number);
         }
         return "Error";
     }
