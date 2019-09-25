@@ -59,8 +59,13 @@ public class Numbers_ {
     @Test
     public void give_a_compound_number_thousand(){
         assertThat(Numbers.get(1000)).isEqualTo("one-thousand");
-       // assertThat(Numbers.get(1234)).isEqualTo("one-thousand-two-hundred-thirty-four");
-
+        assertThat(Numbers.get(2000)).isEqualTo("two-thousand");
+        assertThat(Numbers.get(1034)).isEqualTo("one-thousand-thirty-four");
+        assertThat(Numbers.get(1002)).isEqualTo("one-thousand-two");
+        assertThat(Numbers.get(2004)).isEqualTo("two-thousand-four");
+        assertThat(Numbers.get(2020)).isEqualTo("two-thousand-twenty");
+        assertThat(Numbers.get(4532)).isEqualTo("four-thousand-five-hundred-thirty-two");
+        assertThat(Numbers.get(1200)).isEqualTo("one-thousand-two-hundred");
     }
 
 

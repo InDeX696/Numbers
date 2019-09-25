@@ -19,6 +19,9 @@ public class Numbers {
         }
         if(num == 4){
             if(i == 1000) return "one-thousand";
+            String t =simple(units, Character.getNumericValue(number.charAt(0)));
+            t = t + "-thousand-" + compoundHundred(tens,units,number.substring(1));
+            return (t.replaceAll("-+", "-")).replaceAll("-$", "");
 
         }
         return "Error";
