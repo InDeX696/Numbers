@@ -17,6 +17,10 @@ public class Numbers {
 
             return compoundHundred(tens,units,number);
         }
+        if(num == 4){
+            if(i == 1000) return "one-thousand";
+
+        }
         return "Error";
     }
     private static String compoundTens(Map<Integer, String> tens, Map<Integer,String> units,String n) {
@@ -24,9 +28,9 @@ public class Numbers {
         return result + simple(units, Character.getNumericValue(n.charAt(1)));
     }
     private static String compoundHundred(Map<Integer, String> tens, Map<Integer,String> units,String n) {
-            String result = "-hundred";
-            if(n.charAt(0) != 0){
-                result = simple(units,Character.getNumericValue(n.charAt(0))) + result;
+            String result = "";
+            if(Character.getNumericValue(n.charAt(0)) != 0){
+                result = simple(units,Character.getNumericValue(n.charAt(0))) + "-hundred";
             }
             if(Character.getNumericValue(n.charAt(1)) > 1){
 
