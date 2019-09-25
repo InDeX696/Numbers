@@ -11,19 +11,37 @@ public class Numbers {
             return simple(units,i);
         }
         if(num == 2) {
-            return tens.containsKey(i) ? simple(tens, i) : compound(tens, units, number);
+            return tens.containsKey(i) ? simple(tens, i) : compoundTens( tens,units, number);
         }
         if(num == 3){
-            number = i-100 +"";
-            return i == 100 ? "one-hundred" : "one-hundred-" + compound(tens,units,number);
+
+            return compoundHundred(tens,units,number);
         }
         return "Error";
     }
+    private static String compoundTens(Map<Integer, String> tens, Map<Integer,String> units,String n) {
+        String result = simple(tens, Character.getNumericValue(n.charAt(0))*10) + "-";
+        return result + simple(units, Character.getNumericValue(n.charAt(1)));
+    }
+    private static String compoundHundred(Map<Integer, String> tens, Map<Integer,String> units,String n) {
+            String result = "-hundred";
+            if(n.charAt(0) != 0){
+                result = simple(units,Character.getNumericValue(n.charAt(0))) + result;
+            }
+            if(Character.getNumericValue(n.charAt(1)) > 1){
 
-    private static String compound(Map<Integer, String> tens, Map<Integer,String> units,String i) {
-           String ten = tens.get(Character.getNumericValue(i.charAt(0)) * 10);
-           String unit = units.get(Character.getNumericValue(i.charAt(1)));
-        return ten + "-" + unit;
+                result = result +"-"+ simple(tens, Character.getNumericValue(n.charAt(1))*10);
+
+            }else if(Character.getNumericValue(n.charAt(1)) == 1){
+
+                result = result + "-"+simple(tens,Character.getNumericValue(n.charAt(1) + n.charAt(2)));
+                return result;
+            }
+            if(Character.getNumericValue(n.charAt(2)) != 0){
+                result = result +"-"+ simple(units,Character.getNumericValue(n.charAt(2)));
+            }
+            return result;
+
     }
 
     private static Map<Integer, String> initMapTens() {

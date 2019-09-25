@@ -22,7 +22,6 @@ public class Numbers_ {
         assertThat(Numbers.get(10)).isEqualTo("ten");
         assertThat(Numbers.get(11)).isEqualTo("eleven");
         assertThat(Numbers.get(12)).isEqualTo("twelve");
-        assertThat(Numbers.get(35)).isEqualTo("thirty-five");
         assertThat(Numbers.get(20)).isEqualTo("twenty");
         assertThat(Numbers.get(30)).isEqualTo("thirty");
         assertThat(Numbers.get(40)).isEqualTo("forty");
@@ -43,12 +42,15 @@ public class Numbers_ {
         assertThat(Numbers.get(35)).isEqualTo("thirty-five");
         assertThat(Numbers.get(95)).isEqualTo("ninety-five");
         assertThat(Numbers.get(99)).isEqualTo("ninety-nine");
+        assertThat(Numbers.get(35)).isEqualTo("thirty-five");
 
     }
     @Test
     public void give_a_compound_number_hundred(){
         assertThat(Numbers.get(145)).isEqualTo("one-hundred-forty-five");
         assertThat(Numbers.get(100)).isEqualTo("one-hundred");
+        assertThat(Numbers.get(102)).isEqualTo("one-hundred-two");
+        assertThat(Numbers.get(111)).isEqualTo("one-hundred-eleven");
     }
 
 
