@@ -18,8 +18,10 @@ public class Numbers_ {
         assertThat(Numbers.get(9)).isEqualTo("nine");
     }
     @Test
-    public void give_a__ten(){
+    public void give_a_simple_ten(){
         assertThat(Numbers.get(10)).isEqualTo("ten");
+        assertThat(Numbers.get(11)).isEqualTo("eleven");
+        assertThat(Numbers.get(12)).isEqualTo("twelve");
         assertThat(Numbers.get(20)).isEqualTo("twenty");
         assertThat(Numbers.get(30)).isEqualTo("thirty");
         assertThat(Numbers.get(40)).isEqualTo("forty");
@@ -28,9 +30,43 @@ public class Numbers_ {
         assertThat(Numbers.get(70)).isEqualTo("seventy");
         assertThat(Numbers.get(80)).isEqualTo("eighty");
         assertThat(Numbers.get(90)).isEqualTo("ninety");
+        assertThat(Numbers.get(00)).isEqualTo("cero");
 
     }
+    @Test
+    public void give_a_compound_number_tens(){
+        assertThat(Numbers.get(21)).isEqualTo("twenty-one");
+        assertThat(Numbers.get(22)).isEqualTo("twenty-two");
+        assertThat(Numbers.get(23)).isEqualTo("twenty-three");
+        assertThat(Numbers.get(24)).isEqualTo("twenty-four");
+        assertThat(Numbers.get(32)).isEqualTo("thirty-two");
+        assertThat(Numbers.get(35)).isEqualTo("thirty-five");
+        assertThat(Numbers.get(95)).isEqualTo("ninety-five");
+        assertThat(Numbers.get(99)).isEqualTo("ninety-nine");
+        assertThat(Numbers.get(35)).isEqualTo("thirty-five");
 
+    }
+    @Test
+    public void give_a_compound_number_hundred(){
+        assertThat(Numbers.get(145)).isEqualTo("one-hundred-forty-five");
+        assertThat(Numbers.get(100)).isEqualTo("one-hundred");
+        assertThat(Numbers.get(102)).isEqualTo("one-hundred-two");
+        assertThat(Numbers.get(111)).isEqualTo("one-hundred-eleven");
+        assertThat(Numbers.get(722)).isEqualTo("seven-hundred-twenty-two");
+        assertThat(Numbers.get(951)).isEqualTo("nine-hundred-fifty-one");
+
+    }
+    @Test
+    public void give_a_compound_number_thousand(){
+        assertThat(Numbers.get(1000)).isEqualTo("one-thousand");
+        assertThat(Numbers.get(2000)).isEqualTo("two-thousand");
+        assertThat(Numbers.get(1034)).isEqualTo("one-thousand-thirty-four");
+        assertThat(Numbers.get(1002)).isEqualTo("one-thousand-two");
+        assertThat(Numbers.get(2004)).isEqualTo("two-thousand-four");
+        assertThat(Numbers.get(2020)).isEqualTo("two-thousand-twenty");
+        assertThat(Numbers.get(4532)).isEqualTo("four-thousand-five-hundred-thirty-two");
+        assertThat(Numbers.get(1200)).isEqualTo("one-thousand-two-hundred");
+    }
 
 
 }
